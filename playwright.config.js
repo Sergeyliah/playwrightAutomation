@@ -1,26 +1,9 @@
 // playwright.config.js
-const { defineConfig } = require('@playwright/test');
+import { defineConfig } from '@playwright/test';
 
-module.exports = defineConfig({
-  testDir: './tests',               // Folder where your test files are located
-  timeout: 30000,                   // Test timeout (30 seconds)
-  retries: 1,                       // Retry failed tests once
+export default defineConfig({
   use: {
-    headless: false,                 // Run tests in headless mode
-    viewport: { width: 1280, height: 720 },
-    ignoreHTTPSErrors: true,
-    screenshot: 'only-on-failure', // Take screenshots on failure
-    video: 'retain-on-failure',    // Save video if test fails
-    baseURL: 'https://google.com',
+    baseURL: 'http://localhost:3000', // Change this as needed
+    headless: false,
   },
-  projects: [
-    {
-      name: 'Chromium',
-      use: { browserName: 'chromium' },
-    },
-    {
-      name: 'WebKit',
-      use: { browserName: 'webkit' },
-    },
-  ],
 });
