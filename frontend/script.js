@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("user", JSON.stringify({ username, role: "admin" }));
         window.location.href = "admin.html";
       } else if (username === "user1" && password === "password1") {
-        localStorage.setItem("user", JSON.stringify({ username, role: "user" }));
+        localStorage.setItem("user", JSON.stringify({ username: "Serge", role: "user" }));
         window.location.href = "user-details.html";
       } else {
         alert("Invalid credentials");

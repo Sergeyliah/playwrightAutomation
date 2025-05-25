@@ -3,11 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>User Details</title>
+  <!-- <style>
+    body { font-family: Arial; padding: 20px; }
+    #weather { margin-top: 20px; }
+  </style> -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1 id="user-details">User Details Page</h1>
   <p>Welcome, <span id="user-name"></span>!</p>
+  <img src="assets/weather.png" alt="Weather Icon" class="weather-icon">
+  <h2>Weather Checker</h2>
+  <input type="text" id="cityInput" placeholder="Enter city name" />
+  <button onclick="getWeather()">Get Weather</button>
+  <div id="weather"></div>
   <a href="login.html">Logout</a>
   <script src="script.js"></script>
+  <script src="script2.js"></script>
 </body>
 </html>
